@@ -52,7 +52,6 @@ function numberPress (num) {   //кнопки ввода
 
 function operation (oper) {  //операции
    var localOperationMemory =  display.value; //сохранение текущего значения ввода
-    if (localOperationMemory>= "0") {
     	if(oper === "√x"){
 		localOperationMemory = Math.sqrt(parseFloat(localOperationMemory));
 		MemoryNewNumber = false;
@@ -84,9 +83,7 @@ function operation (oper) {  //операции
 		display.value = Math.round((MemoryCurrentNumber)*10000)/10000;
 		MemoryPendingOperation = oper;
 	}; 
-		}else{
-    	display.value = "NaN";
-    };  
+		
 };
 
 function decimal(argument) {  //десятичная точка
